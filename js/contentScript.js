@@ -11,4 +11,4 @@ function injectScript(filepath) {
   return body.appendChild(script);
 }
 
-injectScript('js/embeded-script.js');
+injectScript('js/embededScript.js');
