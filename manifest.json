@@ -15,12 +15,12 @@
         "https://github.com/*"
       ],
       "js": [
-        "js/content-script.js"
+        "js/contentScript.js"
       ]
     }
   ],
   "web_accessible_resources": [
-    "js/embeded-script.js"
+    "js/embededScript.js"
   ],
   "permissions": [
     "<all_urls>"
