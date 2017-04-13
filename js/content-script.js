@@ -1,12 +1,14 @@
-var injectScript;
+function injectScript(filepath) {
+  // body要素取得
+  const body = document.getElementsByTagName('body')[0];
 
-injectScript = function(file, node) {
-  var s, th;
-  th = document.getElementsByTagName(node)[0];
-  s = document.createElement('script');
-  s.setAttribute('type', 'text/javascript');
-  s.setAttribute('src', file);
-  return th.appendChild(s);
-};
+  // bosyに追加するjsタグ用意
+  const script = document.createElement('script');
+  script.setAttribute('type', 'text/javascript');
+  script.setAttribute('src', chrome.extension.getURL(filepath));
 
-injectScript(chrome.extension.getURL('js/embeded-script.js'), 'body');
+  // bodyにscript挿入
+  return body.appendChild(script);
+}
+
+injectScript('js/embeded-script.js');
